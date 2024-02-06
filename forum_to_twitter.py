@@ -105,9 +105,6 @@ CREDENTIALS = {
   'password': os.environ['FORUM_PASSWORD'],
 }
 
-def load_auth_cookie() -> str:
-    return os.environ['AUTH']
-
 
 def get_recent_mentions(page: int = None) -> dict:
     """
