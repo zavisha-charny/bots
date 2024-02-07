@@ -1,4 +1,5 @@
 import os
+import shutil
 import subprocess
 
 import httpx
@@ -55,4 +56,5 @@ def archive() -> None:
 if __name__ == '__main__':
     get_tids()
     archive()
+    shutil.make_archive('bioenergetic.forum', 'zip', 'bioenergetic.forum')
 
