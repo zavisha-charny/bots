@@ -128,7 +128,7 @@ def get_recent_mentions(page: int = None) -> dict:
             client.post(
                 BASE_URL+'v3/utilities/login', 
                 headers=HEADERS,
-                data=CREDENTIALS
+                json=CREDENTIALS
             )
             response = client.get(url)
             response.raise_for_status()
@@ -184,7 +184,7 @@ def compile_posts_into_topic(topic_slug: str) -> Topic:
                 client.post(
                     BASE_URL+'v3/utilities/login', 
                     headers=HEADERS,
-                    data=CREDENTIALS
+                    json=CREDENTIALS
                 )
                 response = client.get(url)
                 response.raise_for_status()
