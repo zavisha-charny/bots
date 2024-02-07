@@ -61,7 +61,7 @@ def post_forum(posts: list[dict]) -> bool:
         client.post(
             BASE_URL+'utilities/login', 
             headers=HEADERS,
-            data=CREDENTIALS
+            json=CREDENTIALS
         )
         # create a new topic
         first_post = str(posts[0])
